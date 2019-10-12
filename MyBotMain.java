@@ -8,7 +8,8 @@ public class MyBotMain
 
       bot.setVerbose(true);
       bot.connect("irc.freenode.net");
-      bot.joinChannel("#pircbot");
+      bot.joinChannel("#testChannel");
+      
    }
 
 }
