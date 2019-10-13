@@ -5,7 +5,7 @@ Java project to create a ChatBot on *irc.freenode.net* which implements two APIs
 * outputs the first definition of input word from the Oxford Dictionary API (https://developer.oxforddictionaries.com) whenever user types "define" followed by the word.
 ---
 #### Steps
-* Go to webchat.freenode.net on your browser and join #testChannel with any nickname.
+* Go to *webchat.freenode.net* on your browser and join #testChannel with any nickname.
 * Compile and run the MyBotMain.java program on your computer
   ``` \> javac MyBotMain.java ```
   ``` \> java MyBotMain ```
