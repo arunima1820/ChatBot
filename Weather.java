@@ -5,6 +5,7 @@ import com.google.gson.JsonParser;
 
 public class Weather {
 
+		// url and API key
 		private static final String apiKeyWeather = "&APPID=6b870f902bc8889c4da6b941d4d2d177";
 		private static final String weatherURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 	
@@ -19,7 +20,7 @@ public class Weather {
     			return line;
     		}
     	}
-    	
+
     	return null;
     }
     
@@ -29,6 +30,7 @@ public class Weather {
 		try {
 				String url = weatherURL + zip + apiKeyWeather;
 				String json = MyBot.APIConnect(url);
+				System.out.println(json);
 				
 				// converts to String to JSON
 		    	JsonObject object = new JsonParser().parse(json).getAsJsonObject();
@@ -62,7 +64,7 @@ public class Weather {
     
     // converts temperature in Kelvin to Fahrenheit
     private static double convertTemperature(double kelvin) {
-    	return ((9/5) * (kelvin - 273)) + 32;
+    	return ((9/5.0) * (kelvin - 273)) + 32;
     }
-} 
+}
 

@@ -7,6 +7,8 @@ import java.io.*;
 import com.google.gson.*;
 
 public class Dictionary {
+	
+	// url and API keys 
 	private final static String dictionaryURL = "https://od-api.oxforddictionaries.com/api/v2/entries/en-us/";
 	private final static String app_id = "8c126758";
     private final static String app_key = "e900c3afc1c364a15857cdb6dc81c440";
@@ -15,6 +17,8 @@ public class Dictionary {
 	// gets JSON response from API
 	public static String getJSON(String word_id) {
         try {
+        	
+        	// connecting to the API
             URL url = new URL(dictionaryURL + word_id.toLowerCase() + urlAdd);
             HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
             urlConnection.setRequestProperty("Accept","application/json");
@@ -51,6 +55,7 @@ public class Dictionary {
 		return word[1];
 	}
 	
+	// returns the definition output
 	public static String getDefinition(String message) {
 		String json = getJSON(getWord(message));
 		
